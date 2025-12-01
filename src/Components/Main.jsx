@@ -10,8 +10,12 @@ const Main = () => {
     "tomato paste",
   ]);
   const [recipeShown, setRecipeShown] = useState(false);
-
-
+  
+  
+    
+    function toggleRecipeShown() {
+        setRecipeShown(prevShown => !prevShown)
+    }
 
   function addIngredient(formData) {
     const newIngredient = formData.get("ingredient");
@@ -29,11 +33,12 @@ const Main = () => {
         />
         <button>Add ingredient</button>
       </form>
-      <IngredientsList
+      { ingredients.length > 0 &&
+        <IngredientsList
         ingredients={ingredients}
-        setRecipeShown={setRecipeShown}
-      />
-      <ClaudeRecipe recipeShown={recipeShown} />
+        toggleRecipeShown={toggleRecipeShown}
+      />}
+      {recipeShown && <ClaudeRecipe />}
     </main>
   );
 };
