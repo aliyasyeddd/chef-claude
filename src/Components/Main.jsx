@@ -2,6 +2,7 @@ import { useState } from "react";
 import ClaudeRecipe from "./ClaudeRecipe";
 import IngredientsList from "./IngredientsList";
 
+
 const Main = () => {
   const [ingredients, setIngredients] = useState([
     "all the main spices",
@@ -13,7 +14,7 @@ const Main = () => {
   
   
     
-    function toggleRecipeShown() {
+    function getRecipe() {
         setRecipeShown(prevShown => !prevShown)
     }
 
@@ -36,7 +37,7 @@ const Main = () => {
       { ingredients.length > 0 &&
         <IngredientsList
         ingredients={ingredients}
-        toggleRecipeShown={toggleRecipeShown}
+        getRecipe={getRecipe}
       />}
       {recipeShown && <ClaudeRecipe />}
     </main>
