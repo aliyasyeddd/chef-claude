@@ -66,8 +66,12 @@ Reflect briefly on your takeaways:
 ## ▶️ How to Run the Project
 
 ```bash
-npm install
-npm run dev
+```npm install
+```npm run dev
+
+
+
+---
 
 ## 🖼️ Screenshots / Demo  
 
