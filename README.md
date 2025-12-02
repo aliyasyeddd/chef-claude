@@ -60,16 +60,6 @@ Reflect briefly on your takeaways:
 - Using conditional UI sections to enhance interactivity  
 - Creating a beginner-friendly and structured mini React app
 
----
-
-
-## ▶️ How to Run the Project
-
-```bash
-```npm install
-```npm run dev
-
-
 
 ---
 
